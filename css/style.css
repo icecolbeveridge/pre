@@ -1,0 +1,208 @@
+@font-face {
+    font-family: 'Amble';
+    src: url('fonts/Amble-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amble';
+    src: url('fonts/Amble-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amble';
+    src: url('fonts/Amble-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Amble';
+    src: url('fonts/Amble-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Amble';
+    src: url('fonts/Amble-Light.ttf') format('truetype');
+    font-weight: 300; /* Light */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amble';
+    src: url('fonts/Amble-LightItalic.ttf') format('truetype');
+    font-weight: 300; /* Light */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Amble';
+    src: url('fonts/Amble-LightCondensed.ttf') format('truetype');
+    font-weight: 300; /* Light Condensed */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amble';
+    src: url('fonts/Amble-LightCondensedItalic.ttf') format('truetype');
+    font-weight: 300; /* Light Condensed */
+    font-style: italic;
+}
+
+body {
+    font-family: 'Amble', 'Space Mono', monospace;
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    background-color: #282c34;
+    color: #ffffff;
+}
+header {
+    background: #1c1e22;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #61dafb;
+    position: relative; /* Ensure header is positioned correctly */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+h2 {
+    display: flex;
+    align-items: center;
+
+    font-size: 2em;
+    margin: 20px 0;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+
+h2:before, h2:after {
+    content: "";
+    flex: 1;
+    /* display: inline-block; */
+    /* width: 30%; */
+    height: 2px;
+    background: #61dafb;
+    /* vertical-align: middle; */
+    margin: 0 10px;
+}
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.5em; /* Adjust the font size for smaller screens */
+    }
+    h2:before, h2:after {
+        width: 20%; /* Reduce line width for mobile */
+    }
+}
+
+section, footer {
+    padding: 20px;
+    margin: 20px auto;
+    background: #353b45;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+.members, .songs, .shows {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.member, .song, .shows  {
+    margin: 10px;
+    flex: 1 1 200px;
+    text-align: center;
+}
+.member img, .song img {
+    max-width: 100%;
+    border-radius: 8px;
+    border: 2px solid #61dafb;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+input, textarea {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #61dafb;
+    border-radius: 4px;
+    background: #444b52;
+    color: #ffffff;
+}
+button {
+    padding: 10px;
+    background: #61dafb;
+    color: #282c34;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+button:hover {
+    background: #4db8e6;
+}
+@media (max-width: 600px) {
+    .members, .songs {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+nav {
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    background: #1c1e22; 
+    z-index: 1000; /* Ensure the navbar stays above other content */
+    padding: 10px 0; 
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+    text-align: center; 
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #61dafb; 
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline; 
+}
+
+#about p {
+    width: 60%;
+    margin: auto;
+    background-color: #1e1e1e; /* Dark background */
+    padding: 15px; /* Space inside each show box */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #61dafb; /* Blue border */
+    
+}
+
+.show, .member {
+    background-color: #1e1e1e; /* Dark background */
+    padding: 15px; /* Space inside each show box */
+    margin: 10px 0; /* Space between each show */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #61dafb; /* Blue border */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
