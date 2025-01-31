@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Pseudorandom Ensemble</title>
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 
@@ -29,6 +30,8 @@
         <div class="songs">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/tHgdjrDnIbo?si=FkaQixER79Iee_VW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <p>Sam Hartburn: The Ant's Lament</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LXZIQ51W3Ns?si=xIJZDQFdwma2gr2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+             <p>Sam Hartburn: More Than Nine Million Billion Ways</p>
         </div>
     </div>
 </section>
@@ -37,14 +40,6 @@
 <section id="shows">
     <h2>Upcoming Shows</h2>
     <div class ="shows">
-        <div class = "show">
-            <h3>TMiP, University of Warwick</h3>
-            <p>27 August 2025</p>
-        </div>
-        <div class = "show">
-            <h3>EMF, a field in Herefordshire</h3>
-            <p>May 2026</p>
-        </div>
         <div class = "show">
             <h3>The Roof of the Royal Institution</h3>
             <p>TBC</p>
@@ -58,6 +53,7 @@
 
 <section id="members">
     <h2>The Ensemble</h2>
+<p>Members of the Pseudorandom Ensemble include...</p>
     <div class="members">
         <div class="member">
             <img src="images/sam_hartburn.jpg" alt="Sam Hartburn">
@@ -99,10 +95,13 @@
 
 <section id="contact">
     <h2>Contact Us</h2>
-    <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="4" placeholder="Your Message" required></textarea>
+<div id="responseMessage"></div>
+    
+<form  method="POST" id="contactForm"> 
+        <input type="text" name = "name" placeholder="Your Name" required>
+        <input type="email" name = "email"  placeholder="Your Email" required>
+        <input type="text" name = "user_postcode" placeholder="Your postcode">
+	<textarea rows="4" name = "message" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
     </form>
 </section>
@@ -110,6 +109,7 @@
 <footer>
     No ants were harmed in the making of this website.
 </footer>
+<script src="handle_form.js" type="text/javascript"></script>
 
 </body>
 </html>

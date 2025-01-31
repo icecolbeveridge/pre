@@ -188,7 +188,11 @@ nav a:hover {
     text-decoration: underline; 
 }
 
-#about p {
+input[name="user_postcode"] {
+ display: none;
+}
+
+#about p, #responseMessage p {
     width: 60%;
     margin: auto;
     background-color: #1e1e1e; /* Dark background */
