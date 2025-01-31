@@ -118,7 +118,7 @@ section, footer {
     flex-wrap: wrap;
 }
 
-.songs, .shows {
+.songs {
 	flex-direction: column;
 }
 .sender-form-field {
