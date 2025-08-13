@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   quizForm.addEventListener("submit", function (e) {
     e.preventDefault();
-
+      e.stopPropagation();
     const submitButton = document.getElementById("submit-button");
     submitButton.textContent = "Thank you for requesting an encore. Please wait while we process the results";
       submitButton.disabled = true;
@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     quizForm.style.display = "none";
     resultsContainer.style.display = "block";
     quizHeader.textContent = "Rock-readiness analysis";
+	  submitButton.disabled = false;
       }, 2000)  });
 
   document.addEventListener("click", function (e) {
