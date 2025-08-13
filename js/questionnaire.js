@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const quizHeader = document.querySelector("#quiz h2");
   const originalTitle = quizHeader.textContent;
 
-  // Create results container
+
   const resultsContainer = document.createElement("div");
   resultsContainer.id = "quizResults";
   resultsContainer.style.display = "none";
@@ -16,16 +16,23 @@ document.addEventListener("DOMContentLoaded", function () {
   quizForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
+    const submitButton = document.getElementById("submit-button");
+    submitButton.textContent = "Thank you for requesting an encore. Please wait while we process the results";
+      submitButton.disabled = true;
+
+      setTimeout(() => {  
     // Get selected answers
     const rockReady = document.querySelector(
       'input[name="rock_ready"]:checked',
     );
     const whatRock = document.querySelector('input[name="what_rock"]:checked');
 
+
+	  
     // Calculate result
     const result = calculateResult(
-      rockReady ? rockReady.value : null,
-      whatRock ? whatRock.value : null,
+	rockReady?.value,
+	whatRock?.value,
     );
 
     // Display result
@@ -35,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     quizForm.style.display = "none";
     resultsContainer.style.display = "block";
     quizHeader.textContent = "Rock-readiness analysis";
-  });
+      }, 2000)  });
 
   document.addEventListener("click", function (e) {
     if (e.target.classList.contains("retry-btn")) {
